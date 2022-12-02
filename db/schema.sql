@@ -2,6 +2,9 @@
 DROP DATABASE IF EXISTS muppetsInc_db;
 CREATE DATABASE muppetsInc_db;
 
+-- source
+USE muppetsInc_db;
+
 -- department table
 CREATE TABLE department (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
