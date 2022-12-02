@@ -5,4 +5,4 @@ FROM employee e
 JOIN role r ON e.role_id = r.id
 JOIN department d ON r.department_id = d.id
 
--- Figure out GROUP BY
+-- Figure out group
