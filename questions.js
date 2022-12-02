@@ -97,3 +97,14 @@ const updateEmployeeRolePrompt = [
 
     },
 ]
+
+function promptUser(questionsArr) {
+    return inquirer
+        .prompt(
+            ...questionsArr,
+        ).then((ans) => {
+            console.log(ans);
+        })
+}
+
+promptUser(menuPrompt);
