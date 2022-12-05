@@ -15,16 +15,16 @@ app.use('/api', api);
 
 // TODO: Use async for reads?
 
-// // Connects to database
-// const db = mysql.createConnection(
-//     {
-//         host: 'localhost',
-//         user: 'root',
-//         password: 'tacocat',
-//         database: 'muppetsinc_db'
-//     },
-//     console.log('Connected to the muppetsinc_db database')
-// );
+// Connects to database
+const db = mysql.createConnection(
+    {
+        host: 'localhost',
+        user: 'root',
+        password: 'tacocat',
+        database: 'muppetsinc_db'
+    },
+    console.log('Connected to the muppetsinc_db database')
+);
 
 // // Read departments
 // app.get('/api/departments', (req, res) => {
@@ -74,6 +74,25 @@ app.use('/api', api);
        
 //     });
 // });
+
+// create department
+// app.post('/api/new-department', ({ body }, res) => {
+//     const sql = `INSERT INTO department (department_name)
+//     VALUES (?)`;
+//     const params = [body.department_name];
+    
+//     db.query(sql, params, (err, result) => {
+//       if (err) {
+//         res.status(400).json({ error: err.message });
+//         return;
+//       }
+//       res.json({
+//         message: 'success',
+//         data: body
+//       });
+//     });
+//   });
+  
 
 // Runs server
 app.listen(PORT, () => {
