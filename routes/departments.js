@@ -21,4 +21,12 @@ departments.post('/new-department', ({ body }, res) => {
     newQuery.addToDatabase(sql, params, res);
 });
 
+// delete a department
+departments.delete('/:id', (req, res) => {
+    const newQuery = new UserQuery();
+    const params = [req.params.id];
+
+    newQuery.deleteFromDatabase('department', params, res);
+});
+
 module.exports = departments;
