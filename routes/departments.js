@@ -7,6 +7,7 @@ const UserQuery = require('../lib/userQuery');
 departments.get('/', (req, res) => {
     const newQuery = new UserQuery();
     const sql = `SELECT department_name AS Department FROM department`;
+
     newQuery.readAll(sql, res);
 });
 

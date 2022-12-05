@@ -1,39 +1,21 @@
 const roles = require('express').Router();
-// const mysql = require('mysql2');
-
-// const db = mysql.createConnection(
-//     {
-//         host: 'localhost',
-//         user: 'root',
-//         password: 'tacocat',
-//         database: 'muppetsinc_db'
-//     },
-//     console.log('Connected to the muppetsinc_db database')
-// );
-
-// roles.get('/', (req, res) => {
-//     const sql = `SELECT title, salary FROM role`;
-
-//     db.query(sql, (err, rows) => {
-//         if (err) {
-//             res.status(500).json({ error: err.message });
-//             return;
-//         }
-//         res.json({
-//             message: 'success',
-//             data: rows
-//         });
-//     });
-// });
-
-
 const UserQuery = require('../lib/userQuery'); 
 
-// uses class
+// read roles
 roles.get('/', (req, res) => {
     const newQuery = new UserQuery();
     const sql = `SELECT title, salary FROM role`;
     newQuery.readAll(sql, res);
+});
+
+// create a role
+departments.post('/new-role', ({ body }, res) => {
+    const newQuery = new UserQuery();
+    const sql = `INSERT INTO role (title, salary, department_id)
+    VALUES (?)`;
+    const params = [body.title, body.salary, body.department_id];
+
+    newQuery.addToDatabase(sql, params, res);
 });
 
 module.exports = roles;
