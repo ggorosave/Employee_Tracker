@@ -18,6 +18,8 @@ roles.post('/new-role', ({ body }, res) => {
     newQuery.addToDatabase(sql, params, res);
 });
 
+// update a role
+
 // delete a role
 roles.delete('/:id', (req, res) => {
     const newQuery = new UserQuery();

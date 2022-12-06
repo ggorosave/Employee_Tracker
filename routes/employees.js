@@ -19,6 +19,15 @@ employees.post('/new-employee', ({ body }, res) => {
     newQuery.addToDatabase(sql, params, res);
 });
 
+// update an employee's role
+employees.put('/update/:id', (req, res) => {
+    const newQuery = new UserQuery();
+    const sql = `UPDATE employee SET role_id = ? WHERE id = ?`;
+    const params = [req.body.role_id, req.params.id];
+
+    newQuery.updateDatabase(sql, params, res);
+})
+
 // delete an employee
 employees.delete('/:id', (req, res) => {
     const newQuery = new UserQuery();
