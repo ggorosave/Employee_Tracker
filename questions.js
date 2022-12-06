@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const menuPrompt = [
     {
         type: 'list',
-        name: 'menuPrompt',
+        name: 'userOption',
         message: 'Please select one of the options below:',
         choices: ['View All Departments', 'Add a Department', 'View all Roles', 'Add Role', 'View all Employees', 'Update Employee Role', 'Add Employee', 'Quit'],
 
