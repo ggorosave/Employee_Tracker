@@ -2,7 +2,6 @@ const inquirer = require('inquirer');
 
 const menuPrompt = [
     {
-
         type: 'list',
         name: 'menuPrompt',
         message: 'Please select one of the options below:',
