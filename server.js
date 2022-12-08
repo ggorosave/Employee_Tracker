@@ -13,6 +13,24 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use('/api', api);
 
+// Code for later use
+
+// delete a role
+roles.delete('/:id', (req, res) => {
+    const newQuery = new UserQuery();
+    const params = [req.params.id];
+
+    newQuery.deleteFromDatabase('role', params, res);
+});
+
+
+// delete an employee
+employees.delete('/:id', (req, res) => {
+    const newQuery = new UserQuery();
+    const params = [req.params.id];
+
+    newQuery.deleteFromDatabase('employee', params, res);
+});
 
 // Runs server
 app.listen(PORT, () => {
