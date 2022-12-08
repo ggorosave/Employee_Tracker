@@ -8,7 +8,7 @@ Most businesses need a way to keep track of their employee data. The Employee Tr
 
 https://user-images.githubusercontent.com/103039442/206588685-cde70af5-b1ec-4988-977c-8adb9cbbfe74.mp4
 
-- [Google Drive Video]([...](https://drive.google.com/file/d/1U2CD_0AZ0-8KZe4IkLFv7NAKZuJkfjXD/view?usp=sharing))
+- [Google Drive Video](https://drive.google.com/file/d/1U2CD_0AZ0-8KZe4IkLFv7NAKZuJkfjXD/view?usp=sharing)
 
 ## Table of Contents 
 
